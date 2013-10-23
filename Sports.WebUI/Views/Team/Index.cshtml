@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Team>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Available Teams</h2>
+
+        @foreach (Team team in Model)
+        {
+            <div class="col-md-3">
+                <div class="thumbnail  alert alert-info">
+                    <img src="http://fpoimg.com/120x120?text=TEAM" alt="..." class="img-thumbnail">
+                    <div class="caption text-center">
+                        <h4>@team.TeamName</h4>
+                        <p>
+                            <a href="@Url.Action("Team", "Team", new { teamId = team.TeamId })" class="btn btn-primary btn-block btn-sm">
+                                View</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

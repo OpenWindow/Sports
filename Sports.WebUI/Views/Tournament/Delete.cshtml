@@ -1,0 +1,15 @@
+﻿@model Sports.Domain.Entities.Tournament
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h4>Are you sure you want to delete <strong>@Model.TournamentName</strong>?</h4>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" class="btn btn-danger"/> 
+        @Html.ActionLink("Back To Tournaments", "Index", null, new {@class="btn btn-default"})
+    </p>
+}

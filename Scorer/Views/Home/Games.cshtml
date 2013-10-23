@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Sports.Domain.Entities.Schedule>
+@{
+    ViewBag.Title = "Games";
+}
+
+<h2>@ViewBag.Message</h2>
+
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Select a game to enter score</li>
+    @foreach (var s in Model)
+    {
+        <li>@Html.ActionLink(s.HomeTeamId + " vs " + s.AwayTeamId, "Index", "Score", new { scheduleId = s.ScheduleId }, null)</li>
+    }
+    
+</ul>

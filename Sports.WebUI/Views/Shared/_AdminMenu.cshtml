@@ -1,0 +1,8 @@
+﻿<div class="panel panel-info">
+    <div class="panel-heading">Administration</div>
+    <div class="list-group">
+        <a href="@Url.Action("Index", "Admin")" class="list-group-item @if(Request.Url.PathAndQuery.Contains("Admin")) {@Html.Raw("active")}">Settings <span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+        <a href="@Url.Action("Index", "Tournament")" class="list-group-item @if(Request.Url.PathAndQuery.Contains("Tournament")) {@Html.Raw("active")}">Tournaments <span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+        <a href="@Url.Action("Index", "Team")" class="list-group-item @if(Request.Url.PathAndQuery.Contains("Team")) {@Html.Raw("active")}">Teams <span class="glyphicon glyphicon-chevron-right pull-right"></span></a>
+    </div>
+</div>
